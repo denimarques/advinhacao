@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Jogo de Advinhação</title>
+
+    <link rel="stylesheet" href="/public/css/tailwindcss.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <div class="absolute table top-0 left-0 h-full w-full">
+            <div class="align-middle table-cell">
+                <div
+                    class="max-w-lg min-h-[25%] flex flex-col justify-center mx-auto drop-shadow-2xl rounded-lg bg-white p-10 text-center">
+                    <form class="space-y-10 mb-5">
+                        <fieldset class="space-y-5">
+                            <legend class="font-semibold font-Montserrat text-[#34355B] text-3xl">Jogo da Adivinhação
+                            </legend>
+                            <p class="text-[#34355B] text-lg opacity-80">Adivinhe o número entre 0 e 10</p>
+
+                        </fieldset>
+                        <div class="flex justify-center ">
+                            <input class="bg-[#DCE2E9] w-10 text-center py-3 px-2 outline-none rounded-l-lg"
+                                id="tentativa" name="tentativa" type="text" />
+                            <button id="play" class="bg-[#7879F1] text-white cursor-pointer px-4 rounded-r-lg" type="submit">Tentar</button>
+                        </div>
+                    </form>
+                    <span id="incorrect" class="hidden text-red-600">Errou! Tente Novamente</span>
+                    <div id="sucess" class="hidden">
+                        <fieldset class="space-y-10">
+                            <legend id="frase" class="font-medium font-Montserrat text-[#34355B] text-3xl">Acertou em 3 tentativas!</legend>
+                            <button id="new-game"  class="bg-[#7879F1] text-white cursor-pointer p-4 rounded-lg" type="submit">Jogar Novamente</button>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </main>
+    <script src="/public/js/script.js"></script>
+</body>
+
+</html>
